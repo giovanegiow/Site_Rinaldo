@@ -22,6 +22,13 @@
     .btn { display: block; text-align: center; background: #25a244; color: #fff; text-decoration: none;
            padding: 10px 12px; border-radius: 6px; font-weight: 600; font-size: .95rem; }
     .btn:hover { background: #1e8a39; }
+    .busca { max-width: 1200px; margin: 0 auto; padding: 24px 16px 0; }
+    .busca input { width: 100%; padding: 12px 16px; font-size: 1rem; border: 1px solid #d6cdbf; border-radius: 8px;
+                   background: #fff; color: #2b2520; }
+    .busca input:focus { outline: 2px solid #3b2f26; outline-offset: 1px; }
+    .busca .contador { margin-top: 8px; font-size: .9rem; opacity: .7; }
+    .vazio { text-align: center; padding: 40px 16px; opacity: .7; }
+    .card[hidden] { display: none; }
     footer { text-align: center; padding: 24px 16px; font-size: .85rem; opacity: .7; }
   </style>
 </head>
@@ -32,6 +39,11 @@
   </header>
 
   <main>
+    <div class="busca">
+      <input type="search" id="busca" placeholder="Buscar produto (ex.: panela, moedor, garrafinhas)..." aria-label="Buscar produto" autocomplete="off">
+      <p class="contador" id="contador" aria-live="polite"></p>
+    </div>
+    <p class="vazio" id="vazio" hidden>Nenhum produto encontrado.</p>
     <section class="grid">
       <article class="card">
         <div class="card-img"><img src="../img/Balanca%20de%20mesa%20Roberval%20antiga%201965.jpg" alt="Balanca de mesa Roberval antiga 1965" loading="lazy"></div>
@@ -480,6 +492,30 @@
       const msg = "Olá! Quero mais informações sobre: " + btn.dataset.produto;
       btn.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
     });
+
+    // Busca: ignora maiúsculas e acentos, e exige que todas as palavras digitadas apareçam
+    function normalizar(txt) {
+      return txt.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+    const cards = Array.from(document.querySelectorAll(".card"));
+    const textos = cards.map(function (c) { return normalizar(c.querySelector("h2").textContent); });
+    const campo = document.getElementById("busca");
+    const contador = document.getElementById("contador");
+    const vazio = document.getElementById("vazio");
+
+    function filtrar() {
+      const termos = normalizar(campo.value).split(/\s+/).filter(Boolean);
+      let visiveis = 0;
+      cards.forEach(function (card, i) {
+        const ok = termos.every(function (t) { return textos[i].includes(t); });
+        card.hidden = !ok;
+        if (ok) visiveis++;
+      });
+      contador.textContent = visiveis + " de " + cards.length + " produtos";
+      vazio.hidden = visiveis > 0;
+    }
+    campo.addEventListener("input", filtrar);
+    filtrar();
   </script>
 </body>
 </html>
