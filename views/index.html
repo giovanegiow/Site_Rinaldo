@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Antiguidades</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #f5f1ea; color: #2b2520; }
+    header { background: #3b2f26; color: #f5f1ea; padding: 32px 16px; text-align: center; }
+    header h1 { font-size: 1.8rem; font-weight: 600; }
+    header p { margin-top: 6px; opacity: .8; }
+    .grid { max-width: 1200px; margin: 0 auto; padding: 24px 16px; display: grid; gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+    .card { background: #fff; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;
+            box-shadow: 0 1px 3px rgba(0,0,0,.08); transition: transform .15s, box-shadow .15s; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,.12); }
+    .card-img { background: #fff; }
+    .card-img img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; }
+    .card-body { padding: 14px; display: flex; flex-direction: column; gap: 12px; flex: 1; }
+    .card-body h2 { font-size: 1rem; font-weight: 500; line-height: 1.3; flex: 1; }
+    .btn { display: block; text-align: center; background: #25a244; color: #fff; text-decoration: none;
+           padding: 10px 12px; border-radius: 6px; font-weight: 600; font-size: .95rem; }
+    .btn:hover { background: #1e8a39; }
+    footer { text-align: center; padding: 24px 16px; font-size: .85rem; opacity: .7; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Antiguidades</h1>
+    <p>Clique em "Quero mais informações" para falar conosco pelo WhatsApp</p>
+  </header>
+
+  <main>
+    <section class="grid">
+      <article class="card">
+        <div class="card-img"><img src="../img/Balanca%20de%20mesa%20Roberval%20antiga%201965.jpg" alt="Balanca de mesa Roberval antiga 1965" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Balanca de mesa Roberval antiga 1965</h2>
+          <a class="btn" href="#" data-produto="Balanca de mesa Roberval antiga 1965" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Balan%C3%A7a%20suspensa%20Kit%20pesos.png" alt="Balança suspensa Kit pesos" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Balança suspensa Kit pesos</h2>
+          <a class="btn" href="#" data-produto="Balança suspensa Kit pesos" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Bomba%20D_%C3%A1gua%20solo.png" alt="Bomba D&#x27;água solo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Bomba D&#x27;água solo</h2>
+          <a class="btn" href="#" data-produto="Bomba D&#x27;água solo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Bule%20de%20ferro.jpg" alt="Bule de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Bule de ferro</h2>
+          <a class="btn" href="#" data-produto="Bule de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Caldeirao%20de%20ferro%281%29.jpg" alt="Caldeirao de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Caldeirao de ferro</h2>
+          <a class="btn" href="#" data-produto="Caldeirao de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Caldeirao%20de%20ferro.jpg" alt="Caldeirao de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Caldeirao de ferro</h2>
+          <a class="btn" href="#" data-produto="Caldeirao de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/chaleira%20de%20ferro.jpg" alt="Chaleira de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Chaleira de ferro</h2>
+          <a class="btn" href="#" data-produto="Chaleira de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20antigo%20com%20prote%C3%A7ao.jpg" alt="Ferro antigo com proteçao" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro antigo com proteçao</h2>
+          <a class="btn" href="#" data-produto="Ferro antigo com proteçao" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20antigo%281%29.jpg" alt="Ferro antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro antigo</h2>
+          <a class="btn" href="#" data-produto="Ferro antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20antigo%282%29.jpg" alt="Ferro antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro antigo</h2>
+          <a class="btn" href="#" data-produto="Ferro antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20antigo.jpg" alt="Ferro antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro antigo</h2>
+          <a class="btn" href="#" data-produto="Ferro antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20Black%20Decker.jpg" alt="Ferro Black Decker" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro Black Decker</h2>
+          <a class="btn" href="#" data-produto="Ferro Black Decker" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20eletrico%20alfaiate.jpg" alt="Ferro eletrico alfaiate" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro eletrico alfaiate</h2>
+          <a class="btn" href="#" data-produto="Ferro eletrico alfaiate" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20eletrico%20antigo.jpg" alt="Ferro eletrico antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro eletrico antigo</h2>
+          <a class="btn" href="#" data-produto="Ferro eletrico antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20passar%20antigo.jpg" alt="Ferro passar antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro passar antigo</h2>
+          <a class="btn" href="#" data-produto="Ferro passar antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20passar%20roupa%20com%20bico.jpg" alt="Ferro passar roupa com bico" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro passar roupa com bico</h2>
+          <a class="btn" href="#" data-produto="Ferro passar roupa com bico" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20roupa%20antigo%281%29.jpg" alt="Ferro roupa antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro roupa antigo</h2>
+          <a class="btn" href="#" data-produto="Ferro roupa antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/ferro%20roupa%20antigo%282%29.jpg" alt="Ferro roupa antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro roupa antigo</h2>
+          <a class="btn" href="#" data-produto="Ferro roupa antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20roupa%20antigo%283%29.jpg" alt="Ferro roupa antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro roupa antigo</h2>
+          <a class="btn" href="#" data-produto="Ferro roupa antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Ferro%20roupa%20antigo.jpg" alt="Ferro roupa antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Ferro roupa antigo</h2>
+          <a class="btn" href="#" data-produto="Ferro roupa antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Forma%20de%20ferro.jpg" alt="Forma de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Forma de ferro</h2>
+          <a class="btn" href="#" data-produto="Forma de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Forma%20ferro%20antiga.jpg" alt="Forma ferro antiga" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Forma ferro antiga</h2>
+          <a class="btn" href="#" data-produto="Forma ferro antiga" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Frigideira%20de%20ferro.jpg" alt="Frigideira de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Frigideira de ferro</h2>
+          <a class="btn" href="#" data-produto="Frigideira de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/kit%2007%20garrafinhas%20vazias.jpg" alt="Kit 07 garrafinhas vazias" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 07 garrafinhas vazias</h2>
+          <a class="btn" href="#" data-produto="Kit 07 garrafinhas vazias" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Kit%2008%20garrafas%20vazias%20cervejas.jpg" alt="Kit 08 garrafas vazias cervejas" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 08 garrafas vazias cervejas</h2>
+          <a class="btn" href="#" data-produto="Kit 08 garrafas vazias cervejas" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Kit%2008%20garrafinhas%20cervejas%20vazias.jpg" alt="Kit 08 garrafinhas cervejas vazias" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 08 garrafinhas cervejas vazias</h2>
+          <a class="btn" href="#" data-produto="Kit 08 garrafinhas cervejas vazias" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Kit%2008%20garrafinhas%20vazias%2052_10.jpg" alt="Kit 08 garrafinhas vazias 52_10" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 08 garrafinhas vazias 52_10</h2>
+          <a class="btn" href="#" data-produto="Kit 08 garrafinhas vazias 52_10" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Kit%2009%20garrafinhas%20vazias%2069_14.jpg" alt="Kit 09 garrafinhas vazias 69_14" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 09 garrafinhas vazias 69_14</h2>
+          <a class="btn" href="#" data-produto="Kit 09 garrafinhas vazias 69_14" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Kit%2010%20garrafinhas%20antigas%2070_14.jpg" alt="Kit 10 garrafinhas antigas 70_14" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 10 garrafinhas antigas 70_14</h2>
+          <a class="btn" href="#" data-produto="Kit 10 garrafinhas antigas 70_14" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/kit%2010%20garrafinhas%20mistas%20antiga%2070_14.jpg" alt="Kit 10 garrafinhas mistas antiga 70_14" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 10 garrafinhas mistas antiga 70_14</h2>
+          <a class="btn" href="#" data-produto="Kit 10 garrafinhas mistas antiga 70_14" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/kit%2010%20garrafinhas%20vazias%2071_15.jpg" alt="Kit 10 garrafinhas vazias 71_15" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 10 garrafinhas vazias 71_15</h2>
+          <a class="btn" href="#" data-produto="Kit 10 garrafinhas vazias 71_15" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Kit%2012%20garrafinhas%20cervejas%20vazias.jpg" alt="Kit 12 garrafinhas cervejas vazias" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 12 garrafinhas cervejas vazias</h2>
+          <a class="btn" href="#" data-produto="Kit 12 garrafinhas cervejas vazias" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Kit%2012%20garrafinhas%20ice%20vazias.jpg" alt="Kit 12 garrafinhas ice vazias" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 12 garrafinhas ice vazias</h2>
+          <a class="btn" href="#" data-produto="Kit 12 garrafinhas ice vazias" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Kit%2012%20garrafinhas%20vazias%2065_13.jpg" alt="Kit 12 garrafinhas vazias 65_13" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 12 garrafinhas vazias 65_13</h2>
+          <a class="btn" href="#" data-produto="Kit 12 garrafinhas vazias 65_13" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Kit%2012%20garrafinhas%20vazias%281%29.jpg" alt="Kit 12 garrafinhas vazias" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 12 garrafinhas vazias</h2>
+          <a class="btn" href="#" data-produto="Kit 12 garrafinhas vazias" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/kit%2012%20garrafinhas%20vazias.jpg" alt="Kit 12 garrafinhas vazias" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 12 garrafinhas vazias</h2>
+          <a class="btn" href="#" data-produto="Kit 12 garrafinhas vazias" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Kit%208%20garrafas%20Draft.png" alt="Kit 8 garrafas Draft" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Kit 8 garrafas Draft</h2>
+          <a class="btn" href="#" data-produto="Kit 8 garrafas Draft" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Machados%20e%20cunha%20antigos.jpg" alt="Machados e cunha antigos" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Machados e cunha antigos</h2>
+          <a class="btn" href="#" data-produto="Machados e cunha antigos" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Maquina%20de%20moer%20carne%20manual.jpg" alt="Maquina de moer carne manual" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Maquina de moer carne manual</h2>
+          <a class="btn" href="#" data-produto="Maquina de moer carne manual" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Maquina%20de%20moer%20graos%20antiga%281%29.jpg" alt="Maquina de moer graos antiga" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Maquina de moer graos antiga</h2>
+          <a class="btn" href="#" data-produto="Maquina de moer graos antiga" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Maquina%20de%20moer%20graos%20antiga.jpg" alt="Maquina de moer graos antiga" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Maquina de moer graos antiga</h2>
+          <a class="btn" href="#" data-produto="Maquina de moer graos antiga" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20antigo%281%29.jpg" alt="Moedor antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor antigo</h2>
+          <a class="btn" href="#" data-produto="Moedor antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20antigo%282%29.jpg" alt="Moedor antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor antigo</h2>
+          <a class="btn" href="#" data-produto="Moedor antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20antigo.jpg" alt="Moedor antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor antigo</h2>
+          <a class="btn" href="#" data-produto="Moedor antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20cafe%20antigo%20fama.jpg" alt="Moedor cafe antigo fama" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor cafe antigo fama</h2>
+          <a class="btn" href="#" data-produto="Moedor cafe antigo fama" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20cafe%20antigo%20mimoso%2003.jpg" alt="Moedor cafe antigo mimoso 03" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor cafe antigo mimoso 03</h2>
+          <a class="btn" href="#" data-produto="Moedor cafe antigo mimoso 03" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20cafe%20antigo%281%29.jpg" alt="Moedor cafe antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor cafe antigo</h2>
+          <a class="btn" href="#" data-produto="Moedor cafe antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20cafe%20antigo%282%29.jpg" alt="Moedor cafe antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor cafe antigo</h2>
+          <a class="btn" href="#" data-produto="Moedor cafe antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20cafe%20antigo.jpg" alt="Moedor cafe antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor cafe antigo</h2>
+          <a class="btn" href="#" data-produto="Moedor cafe antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20carne%20antigo%281%29.jpg" alt="Moedor carne antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor carne antigo</h2>
+          <a class="btn" href="#" data-produto="Moedor carne antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20carne%20antigo.jpg" alt="Moedor carne antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor carne antigo</h2>
+          <a class="btn" href="#" data-produto="Moedor carne antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20de%20cafe%20antigo.jpg" alt="Moedor de cafe antigo" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor de cafe antigo</h2>
+          <a class="btn" href="#" data-produto="Moedor de cafe antigo" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Moedor%20de%20carne.jpg" alt="Moedor de carne" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Moedor de carne</h2>
+          <a class="btn" href="#" data-produto="Moedor de carne" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Panela%20de%20ferro%20.jpg" alt="Panela de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Panela de ferro</h2>
+          <a class="btn" href="#" data-produto="Panela de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Panela%20de%20ferro%281%29.jpg" alt="Panela de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Panela de ferro</h2>
+          <a class="btn" href="#" data-produto="Panela de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Panela%20de%20ferro%282%29.jpg" alt="Panela de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Panela de ferro</h2>
+          <a class="btn" href="#" data-produto="Panela de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Panela%20de%20ferro%283%29.jpg" alt="Panela de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Panela de ferro</h2>
+          <a class="btn" href="#" data-produto="Panela de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Panela%20de%20ferro%284%29.jpg" alt="Panela de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Panela de ferro</h2>
+          <a class="btn" href="#" data-produto="Panela de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Panela%20de%20ferro%285%29.jpg" alt="Panela de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Panela de ferro</h2>
+          <a class="btn" href="#" data-produto="Panela de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Panela%20de%20ferro.jpg" alt="Panela de ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Panela de ferro</h2>
+          <a class="btn" href="#" data-produto="Panela de ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/panela%20ferro%20antiga.jpg" alt="Panela ferro antiga" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Panela ferro antiga</h2>
+          <a class="btn" href="#" data-produto="Panela ferro antiga" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-img"><img src="../img/Panela%20ferro.jpg" alt="Panela ferro" loading="lazy"></div>
+        <div class="card-body">
+          <h2>Panela ferro</h2>
+          <a class="btn" href="#" data-produto="Panela ferro" target="_blank" rel="noopener">Quero mais informações</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>&copy; 2026</footer>
+
+  <script>
+    // TROQUE PELO SEU NÚMERO: código do país + DDD + número, só dígitos (ex.: 5511999999999)
+    const WHATSAPP = "5500000000000";
+
+    document.querySelectorAll(".btn[data-produto]").forEach(function (btn) {
+      const msg = "Olá! Quero mais informações sobre: " + btn.dataset.produto;
+      btn.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
+    });
+  </script>
+</body>
+</html>
