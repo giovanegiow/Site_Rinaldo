@@ -39,6 +39,14 @@
     .busca .contador { margin-top: 8px; font-size: .9rem; opacity: .7; }
     .vazio { text-align: center; padding: 40px 16px; opacity: .7; }
     .card[hidden] { display: none; }
+    /* Celular: duas colunas para o cliente ver mais peças sem rolar tanto */
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; padding: 16px 12px; }
+      .busca { padding: 16px 12px 0; }
+      .card-body { padding: 10px; gap: 10px; }
+      .card-body h2 { font-size: .9rem; }
+      .btn { padding: 9px 6px; font-size: .8rem; line-height: 1.25; }
+    }
     footer { text-align: center; padding: 24px 16px; font-size: .85rem; opacity: .7; }
   </style>
 </head>
@@ -51,7 +59,7 @@
 
   <main>
     <div class="busca">
-      <input type="search" id="busca" placeholder="Buscar produto (ex.: Balança, ferro, garrafa)..." aria-label="Buscar produto" autocomplete="off">
+      <input type="search" id="busca" placeholder="Buscar (ex.: balança, ferro, garrafa)" aria-label="Buscar produto" autocomplete="off">
       <p class="contador" id="contador" aria-live="polite"></p>
     </div>
     <p class="vazio" id="vazio" hidden>Nenhum produto encontrado.</p>
@@ -504,7 +512,9 @@
       btn.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg);
     });
 
-    // Busca: ignora maiúsculas e acentos, e exige que todas as palavras digitadas apareçam
+    // Busca: ignora maiúsculas e acentos, e exige que todas as palavras digitadas apareçam.
+    // Cada palavra perde o final em vogal/"s" ("garrafa" -> "garraf"), para achar também
+    // plural e diminutivo ("garrafas", "garrafinhas").
     function normalizar(txt) {
       return txt.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
@@ -515,7 +525,10 @@
     const vazio = document.getElementById("vazio");
 
     function filtrar() {
-      const termos = normalizar(campo.value).split(/\s+/).filter(Boolean);
+      const termos = normalizar(campo.value).split(/\s+/).filter(Boolean).map(function (t) {
+        const raiz = t.replace(/[aeos]+$/, "");
+        return raiz.length >= 3 ? raiz : t;
+      });
       let visiveis = 0;
       cards.forEach(function (card, i) {
         const ok = termos.every(function (t) { return textos[i].includes(t); });
